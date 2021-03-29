@@ -21,26 +21,77 @@ header li {
 .inline-block {
     color: black;
 }
-
 .cardContent {
     padding: 100px 15px;
   }
 .logo {
     height: 25px;
 }
-.heroText, h1 {
-    color: royalblue;
+.cards {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  perspective: 1000px;
+  justify-content: left;
+  align-content: left;
+  align-items: left;
+  margin-bottom: 80px;
+  padding: 20px;
 }
-.heroBox {
-  background-image: url(../images/me.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 400px;
-  width: max-content;
-  padding: 50px;
-  margin-bottom: 50px;
-  
+.cards__single {
+  background: royalblue;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width:100%;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  text-align: left;
+  padding: 20px;
+  -webkit-transition: transform 0.6s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  position: relative;
+  transition: transform 0.6s;
+  -webkit-transition: transform 0.6s;
 }
+.cards__image {
+  text-align: left;
+  width: 100%;
+  border-radius: 16px;
+  padding: 20px;
+  width: 50%;
+  height: 0 auto;
+}
+.cards__single.flip {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+.cards__front, .cards__back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.cards__front {
+  height: 100%;
+  transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+}
+.cards__back {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  position: absolute;
+  text-align: center;
+  right: 0;
+  left: 0;
+  top: 10px;
+  color: #20263f;
+}
+ .mySkills {
+   display: flex;
+ } 
 .flexContainer {
   display: flex;
   padding: 60px 30px;
@@ -49,7 +100,6 @@ header li {
   width: 33%;
   padding: 25px;
 }
-
 .myWork {
   padding: 60px 30px;
   padding-top: 0;
@@ -73,30 +123,40 @@ header li {
 }
 .mockup1 {
   grid-area: mockup1;
+  overflow: auto;
 }
 .mockup2 {
   grid-area: mockup2;
+  overflow: auto;
 }
 .mockup3 {
   grid-area: mockup3;
+  overflow: auto;
 }
 .mockup1, .mockup2, .mockup3, .content1, .content2, .content3 {
   padding: 50px;
   background-color: royalblue;
   margin-top: 20px;
   margin-bottom: 20px;
+  overflow: auto;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
 }
 .content1 {
   grid-area: content1;
+  overflow: auto;
 }
 .content2 {
   grid-area: content2;
+  overflow: auto;
 }
 .content3 {
   grid-area: content3;
+  overflow: auto;
 }
-
-
+.image1, .image2, .image3 {
+  height: 50%;
+  width: auto;
+}
 footer {
     padding: 5px;
     color: white;
@@ -134,3 +194,19 @@ p {
       ;
   }
 }
+
+@media (min-width: 1000px) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    position: relative;
+    perspective: 1000px;
+    align-items: stretch;
+  }
+  .cards__single {
+    width: 100%;
+  }
+}
+

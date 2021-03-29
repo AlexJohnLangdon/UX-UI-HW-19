@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>Portfolio</title>
     <link href="css/style.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/uhe0ifd.css">
     <link rel="stylesheet" href="https://use.typekit.net/uhe0ifd.css">
-
+    
   </head>
   <body>
 
@@ -21,33 +22,36 @@
     </header>
 
 <!-- Hero Image & Text -->
-    <section class="heroText">
-       <div class="heroBox"
-        <div>
+    <section class="cards">
+      <div class="cards__single">
+        <div class="cards__front">
+          <img class="cards__image" src="images/me.jpg" alt="Me">
+          <h1 class="cards__name" tabindex="0">Hey, I'm Alex</h1>
+        </div>
+        <div class="cards__back">
           <h1>Hey, I’m Alex.</h1>
           <p>A UX/UI designer, graphic artist, illustrator and aspiring storyteller.</p>
           <p>Lets work together - alexjohnlangdon@gmail.com</p>
         </div>
       </div>
-    </section>
 
 
 <!-- My UX Skills section coded using CSS flex -->
-    </section>
+    </section class="mySkills">
       <h3 class="heading">My UX Skills</h3>
       <section class="flexContainer">
         <div>
-          <img src="/images/user-testing.png" alt="user-testing">
+          <img src="images/user-testing.png" alt="user-testing" width="250px" height="250px">
           <h3>User Research and Testing</h3>
           <p>Working knowledge of quantitative, behavioral analysis and statistics. Critical-thinking and problem-solving skills. Team player. Good time-management skills.</p>
         </div>
         <div>
-          <img src="/images/end-to-end.png" alt="end-to-end">
+          <img src="images/end-to-end.png" alt="end-to-end" width="250px" height="250px">
           <h3>End to End Itterative Design</h3>
           <p>Understanding of the processes involved in taking a project from concept to completion. User research, testing, wireframes and prototyping, hi-fidelity mockups and front end development.</p>
         </div>
         <div>
-          <img src="/images/prototyping.png" alt="prototyping">
+          <img src="images/prototyping.png" alt="prototyping" width="250px" height="250px">
           <h3>Prototyping</h3>
           <p>Knoledge of how to bring take a project from a basic, wireframe and breath life into it.</p>
         </div>
@@ -58,23 +62,23 @@
       <h3 class="heading">My Work</h3>
       <div class="workGrid">
         <div class="mockup1">
-          <img src="">
+          <img class="image1" src="images/recomondo.png">
         </div>
         <div class="content1">
           <h3>Recomondo</h3>
           <p>We have developed a travel app to help young solo travellers to fully immerse themselves in the culture of a destination.</p>
-          <button>Check it Out</button>
+          <button class="button1">Check it Out</button>
         </div>
         <div class="mockup2">
-          <img src="">
-        </div>
-        <div class="content2">
-          <h3>HouseMates</h3>
+          <h3>HouseMate</h3>
           <p>We have developed an app designed to delegate household tasks, organise payment of bills and streamline communication between housemates.</p>
           <button>Check it Out</button>
         </div>
+        <div class="content2">
+          <img class="image2" src="images/housemate.png">
+        </div>
         <div class="mockup3">
-          <img src="">
+          <img class="image3" src="images/tradies.png">
         </div>
         <div class="content3">
           <h3>Tradies for the Bushfire Rebuild</h3>
@@ -90,5 +94,9 @@
         <p>alexjohnlangdon@gmail.com</p>
         <p>0415 105 402</p>
     </footer>
+
+<!-- Java Script -->    
+    <script src="jquery-latest.js"></script>    
+    <script src="js/index.js"></script>
   </body>
 </html>
